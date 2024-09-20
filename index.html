@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Company Portfolio</title>
+    <title>Washed Up Apps</title>
+    <!-- Favicon -->
+    <link rel="icon" href="wash.png" type="image/png">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
         *, *::before, *::after {
@@ -26,6 +30,7 @@
             position: relative;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
+            padding-top: 0; /* Removed padding as header is no longer present */
         }
 
         a {
@@ -78,6 +83,21 @@
             color: #CCCCCC;
             animation: fadeInUp 1.2s ease-out forwards;
             max-width: 800px;
+            text-align: center; /* Ensure text is centered */
+        }
+
+        .hero p i {
+            color: #3B82F6;
+            margin-right: 0.5rem;
+        }
+
+        .hero p span {
+            color: #3B82F6; /* Highlight color for numbers */
+            font-weight: 600;
+        }
+
+        .published-apps-count {
+            margin-right: 0.5rem; /* Added spacing between "16" and "Published Apps" */
         }
 
         .hero a {
@@ -110,7 +130,7 @@
             backdrop-filter: blur(5px);
             width: 90%;
             max-width: 1200px;
-            margin: 2rem;
+            margin: 2rem auto; /* Horizontally centered */
         }
 
         /* Animated State */
@@ -223,6 +243,9 @@
             color: #3B82F6;
             font-size: 1.5rem;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .social-links a:hover {
@@ -268,6 +291,7 @@
             .app-item {
                 flex-direction: column;
                 align-items: flex-start;
+                margin: 2rem auto; /* Ensure horizontal centering */
             }
 
             .app-image {
@@ -330,21 +354,28 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <h1>Discover Our Innovative Apps</h1>
-            <p>Explore a collection of cutting-edge applications designed to enhance your productivity, creativity, and lifestyle.</p>
+<h1 style="margin-bottom: 10px; font-size: 2.5rem;">Innovative App Development</h1>
+<p style="line-height: 1.8; font-size: 1.2rem; margin-bottom: 15px;">
+    <i class="fas fa-eye" style="color: #4285F4; margin-right: 8px;"></i><span>2M+</span> Impressions,&nbsp;
+    <i class="fas fa-download" style="color: #4285F4; margin-right: 8px;"></i><span>160K+</span> Downloads,&nbsp;
+    <i class="fas fa-rocket" style="color: #4285F4; margin-right: 8px;"></i><span>16</span> Published Apps
+</p>
+<p style="line-height: 1.8; font-size: 1.1rem;">
+    Our team of ex-SpaceX engineers develop advanced apps with unmatched speed.
+</p>
             <a href="#apps">View Our Apps</a>
         </div>
     </section>
 
     <!-- App Portfolio -->
-    <section class="app-item animate" data-delay="0.1s">
+    <section class="app-item animate" id="apps" data-delay="0.1s">
         <div class="app-image">
             <!-- Replace with your actual screenshot image inside an iPhone frame -->
-            <img src="3.png" alt="RizzGPT" loading="lazy">
+            <img src="3.png" alt="RizzGPT Screenshot" loading="lazy">
         </div>
         <div class="app-details">
             <h2 class="app-title">RizzGPT</h2>
-            <p class="app-description">Streamline your productivity with TaskMaster, the ultimate task management app designed to keep you organized and efficient.</p>
+            <p class="app-description">RizzGPT: Your AI-powered dating wingman to craft the perfect messages.</p>
             <div class="app-stats">
                 <div class="stat">
                     <span class="stat-number">70k+</span>
@@ -365,11 +396,11 @@
 
     <section class="app-item animate" data-delay="0.2s">
         <div class="app-image">
-            <img src="5.png" alt="TravelBuddy Screenshot" loading="lazy">
+            <img src="5.png" alt="MemeGPT Screenshot" loading="lazy">
         </div>
         <div class="app-details">
             <h2 class="app-title">MemeGPT</h2>
-            <p class="app-description">Explore the world with TravelBuddy, your personal guide to the best destinations, itineraries, and travel tips.</p>
+            <p class="app-description">MemeGPT: Create hilarious memes effortlessly with AI-driven tools.</p>
             <div class="app-stats">
                 <div class="stat">
                     <span class="stat-number">10K+</span>
@@ -390,11 +421,11 @@
 
     <section class="app-item animate" data-delay="0.3s">
         <div class="app-image">
-            <img src="4.png" alt="FitLife Screenshot" loading="lazy">
+            <img src="4.png" alt="Watevent Screenshot" loading="lazy">
         </div>
         <div class="app-details">
             <h2 class="app-title">Watevent</h2>
-            <p class="app-description">Achieve your fitness goals with FitLife, featuring personalized workout plans and real-time progress tracking.</p>
+            <p class="app-description">Watevent: Discover and join local fun events tailored to your interests.</p>
             <div class="app-stats">
                 <div class="stat">
                     <span class="stat-number">5K+</span>
@@ -413,24 +444,17 @@
         </div>
     </section>
 
-
     <!-- Add more app-item sections as needed -->
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <h2>Connect with Us</h2>
         <div class="social-links">
-            <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
-                <!-- Twitter Icon (Replace with an actual icon if desired) -->
-                Twitter
+            <a href="https://x.com/ariwasch" target="_blank" aria-label="Ari's X">
+                <i class="fab fa-twitter"></i> Ari
             </a>
-            <a href="https://linkedin.com/in/yourhandle" target="_blank" aria-label="LinkedIn">
-                <!-- LinkedIn Icon (Replace with an actual icon if desired) -->
-                LinkedIn
-            </a>
-            <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
-                <!-- Another Twitter or LinkedIn handle -->
-                Twitter
+            <a href="https://x.com/amaan_shabeer" target="_blank" aria-label="Amaan's X">
+                <i class="fab fa-twitter"></i> Amaan
             </a>
         </div>
     </section>
