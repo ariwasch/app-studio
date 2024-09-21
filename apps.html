@@ -23,19 +23,84 @@
         }
 
         body {
-            background-color: #121212;
+            background-color: #05051a; /* Changed to very dark blue */
             color: #E0E0E0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             position: relative;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
-            padding-top: 0;
+            padding-top: 80px; /* Adjusted for fixed header */
         }
 
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        /* Header Styles */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 26, 0.7); /* Semi-transparent dark blue background */
+            backdrop-filter: blur(10px); /* Optional: adds a blur effect */
+            z-index: 10; /* Ensure the header is above other elements */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: #3B82F6;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+        }
+
+        .nav-link:hover {
+            color: #3B82F6;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
         }
 
         /* Canvas Background */
@@ -46,47 +111,6 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-        }
-
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(18, 18, 18, 0.95);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            width: 40px;
-            margin-right: 0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            font-size: 1rem;
-            color: #E0E0E0;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #3B82F6;
         }
 
         /* Section Styles */
@@ -101,14 +125,9 @@
             z-index: 1;
         }
 
-        /* Add top padding to accommodate fixed header */
-        .app-portfolio, .about-section, .footer-section {
-            padding-top: 80px; /* Adjust based on header height */
-        }
-
         /* Hero Section */
         .hero-section {
-            background-color: rgba(18, 18, 18, 0.95);
+            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
             color: #FFFFFF;
             padding: 6rem 2rem;
             text-align: left;
@@ -158,7 +177,7 @@
 
         /* Our Numbers Section */
         .numbers-section {
-            background-color: rgba(18, 18, 18, 0.95);
+            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
             padding: 4rem 2rem;
             text-align: center;
             color: #FFFFFF;
@@ -230,7 +249,7 @@
         .app-item {
             display: flex;
             align-items: center;
-            background-color: rgba(30, 30, 30, 0.95);
+            background-color: rgba(30, 30, 30, 0.7);
             border-radius: 12px;
             padding: 1.5rem;
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -345,33 +364,9 @@
             transform: translateY(-2px);
         }
 
-        /* About Section */
-        .about-section {
-            background-color: rgba(18, 18, 18, 0.95);
-            padding: 4rem 2rem;
-            text-align: center;
-            color: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .about-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-section p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #B3B3B3;
-        }
-
         /* Testimonials Section */
         .testimonials-section {
-            background: rgba(18, 18, 18, 0.9);
+            background: rgba(10, 10, 42, 0.9); /* Adjusted to match new background */
             padding: 4rem 2rem;
             text-align: center;
             color: #FFFFFF;
@@ -386,7 +381,7 @@
         }
 
         .xyz-blurb {
-            background-color: rgba(18, 18, 18, 0.95);
+            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
             padding: 2rem;
             border-radius: 12px;
             margin-bottom: 3rem;
@@ -440,6 +435,16 @@
             padding-left: 1.5rem;
         }
 
+        /* Stars for Rating */
+        .stars {
+            color: #FFD700; /* Gold color for stars */
+            margin-bottom: 1rem;
+        }
+
+        .stars i {
+            margin-right: 0.2rem;
+        }
+
         cite {
             font-style: normal;
             font-weight: bold;
@@ -454,7 +459,7 @@
 
         /* Company Mission Section */
         .company-mission {
-            background: rgba(18, 18, 18, 0.85);
+            background: rgba(10, 10, 42, 0.85); /* Adjusted to match new background */
             padding: 4rem 2rem;
             text-align: center;
             color: #FFFFFF;
@@ -475,7 +480,7 @@
 
         /* Contact Section */
         .contact-section {
-            background: rgba(18, 18, 18, 0.8);
+            background: rgba(10, 10, 42, 0.8); /* Adjusted to match new background */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -506,11 +511,10 @@
             color: #2563EB;
         }
 
-        /* Footer Section */
-        .footer-section {
-            background: rgba(18, 18, 18, 0.85);
-            padding: 2rem;
+        /* Footer */
+        footer {
             text-align: center;
+            padding: 2rem 0;
             color: #777777;
             font-size: 0.9rem;
             border-top: 1px solid #333333;
@@ -554,9 +558,9 @@
                 align-items: center;
             }
 
-            .app-item.image-right {
+            /* .app-item.image-left, .app-item.image-right {
                 flex-direction: column;
-            }
+            } */
 
             .app-image {
                 max-width: 80%;
@@ -645,6 +649,14 @@
 
             .app-description {
                 font-size: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
             }
 
             .app-button {
@@ -744,34 +756,24 @@
 </head>
 <body>
 
-    <!-- Canvas for Moving Starry Background -->
-    <canvas id="starfield"></canvas>
-
     <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="wash.png" alt="Washed Up Apps Logo">
-            <span>Washed Up Apps</span>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="wash.png" alt="Washed Up Apps Logo" class="logo">
+            <span class="site-title">Washed Up Apps</span>
         </div>
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#apps">Apps</a>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">About</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div>
-            <h2>About Us</h2>
-            <p>
-                Welcome to Washed Up Apps! We're dedicated to showcasing the latest and most innovative applications in the market. Whether you're looking for tools to enhance your productivity, entertain yourself, or connect with others, our curated selection of apps has something for everyone. Explore our portfolio and discover the next big thing in the app world!
-            </p>
-        </div>
-    </section>
+    <!-- Canvas for Moving Starry Background -->
+    <canvas id="starfield"></canvas>
 
     <!-- App Portfolio Section -->
     <section class="app-portfolio" id="apps">
-        <h2>Washed Up Apps</h2>
+        <h2>Try our apps for free!</h2>
 
         <!-- RizzGPT App Item -->
         <div class="app-item animate image-left" id="app2" data-delay="0.2s">
@@ -812,7 +814,7 @@
         </div>
 
         <!-- MemeGPT App Item -->
-        <div class="app-item animate image-right" id="app3" data-delay="0.4s">
+        <div class="app-item animate image-left" id="app3" data-delay="0.4s">
             <div class="app-image">
                 <img src="5.png" alt="MemeGPT Screenshot" loading="lazy">
             </div>
@@ -910,15 +912,13 @@
     </section>
 
     <!-- Footer Section -->
-    <section class="footer-section" id="footer">
-        <footer>
-            &copy; 2024 Washed Up Apps. All rights reserved.
-        </footer>
-    </section>
+    <footer>
+        &copy; 2024 Washed Up Apps. All rights reserved.
+    </footer>
 
     <!-- JavaScript for Scroll-triggered Animations and Starfield -->
     <script>
-        // Starfield Animation
+        // Starfield and Shooting Stars Animation
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
 
@@ -961,9 +961,52 @@
             }
         }
 
+        // Shooting Star class
+        class ShootingStar {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height * 0.5; // Start from the top half
+                this.length = Math.random() * 80 + 10;
+                this.speed = Math.random() * 10 + 6;
+                this.angle = Math.random() * Math.PI / 3 + Math.PI / 6; // Between 30 and 60 degrees
+                this.opacity = 1;
+                this.trail = [];
+            }
+
+            update() {
+                const vx = Math.cos(this.angle) * this.speed;
+                const vy = Math.sin(this.angle) * this.speed;
+                this.x += vx;
+                this.y += vy;
+                this.trail.push({x: this.x, y: this.y});
+                if (this.trail.length > 10) {
+                    this.trail.shift();
+                }
+
+                // Fade out
+                this.opacity -= 0.02;
+                if (this.opacity <= 0 || this.x > canvas.width || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+
+            draw(ctx) {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x - Math.cos(this.angle) * this.length, this.y - Math.sin(this.angle) * this.length);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        }
+
         // Initialize stars
         const stars = [];
-        const numStars = 100;
+        const numStars = 400;
 
         for (let i = 0; i < numStars; i++) {
             const x = Math.random() * canvas.width;
@@ -974,12 +1017,31 @@
             stars.push(new Star(x, y, radius, speed, opacity));
         }
 
+        // Initialize shooting stars
+        const shootingStars = [];
+        const shootingStarInterval = 200000000; // Increased time between shooting stars to 200,000 ms (200 seconds)
+
+        function createShootingStar() {
+            shootingStars.push(new ShootingStar());
+            // Schedule next shooting star
+            setTimeout(createShootingStar, shootingStarInterval + Math.random() * 3000);
+        }
+
+        // Start shooting stars
+        createShootingStar();
+
         // Animation loop
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Draw stars
             for (let star of stars) {
                 star.update();
                 star.draw(ctx);
+            }
+            // Draw shooting stars
+            for (let shootingStar of shootingStars) {
+                shootingStar.update();
+                shootingStar.draw(ctx);
             }
             requestAnimationFrame(animate);
         }
