@@ -104,6 +104,14 @@
             width: 100%;
         }
 
+        /* Menu Icon */
+        .menu-icon {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+        }
+
         /* Canvas Background */
         #starfield {
             position: fixed;
@@ -205,7 +213,6 @@
 
         .revenue-image {
             flex: 1;
-            display: flex;
             justify-content: center;
         }
 
@@ -456,7 +463,6 @@
             margin-bottom: 3rem;
             max-width: 800px;
             font-size: 1.5rem; /* Added this line to increase font size */
-
         }
 
         .testimonial-divider {
@@ -608,10 +614,6 @@
                 align-items: center;
             }
 
-            .app-item.image-left, .app-item.image-right {
-                flex-direction: column;
-            }
-
             .app-image {
                 max-width: 80%;
                 margin: 1rem 0;
@@ -676,6 +678,30 @@
             /* Testimonials Blurb Adjustment */
             .testimonials-blurb {
                 font-size: 1rem;
+            }
+
+            /* Mobile Navigation Menu */
+            .navigation {
+                display: none; /* Hide the navigation menu by default */
+                position: absolute;
+                top: 80px; /* Adjust according to header height */
+                left: 0;
+                width: 100%;
+                background: rgba(5, 5, 26, 0.95);
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+                z-index: 9;
+            }
+            .navigation.active {
+                display: flex; /* Show the navigation menu when active */
+            }
+            .menu-icon {
+                display: block; /* Show the menu icon on small screens */
+            }
+            .site-header {
+                justify-content: space-between; /* Adjust header alignment */
             }
         }
 
@@ -834,13 +860,17 @@
             <img src="wash.png" alt="Washed Up Apps Logo" class="logo">
             <span class="site-title">Washed Up Apps</span>
         </div>
-        <nav class="navigation">
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="navigation" id="nav-menu">
             <a href="#hero" class="nav-link">Home</a>
             <a href="#apps" class="nav-link">Apps</a>
             <a href="#testimonials" class="nav-link">Testimonials</a>
             <a href="#contact" class="nav-link">Contact</a>
             <a href="apps.html" class="nav-link">Landing Page</a>
-
         </nav>
     </header>
 
@@ -1080,7 +1110,7 @@
         &copy; 2024 Washed Up Apps. All rights reserved.
     </footer>
 
-    <!-- JavaScript for Scroll-triggered Animations and Starfield with Shooting Stars -->
+    <!-- JavaScript for Scroll-triggered Animations, Hamburger Menu, and Starfield with Shooting Stars -->
     <script>
         // Starfield and Shooting Stars Animation
         const canvas = document.getElementById('starfield');
@@ -1245,6 +1275,14 @@
 
             appItems.forEach(item => {
                 observer.observe(item);
+            });
+
+            // Hamburger Menu Toggle
+            const menuIcon = document.getElementById('menu-icon');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuIcon.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
             });
         });
     </script>
