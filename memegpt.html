@@ -1,11 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Existing basic meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Enhanced SEO Meta Tags -->
-    <meta name="description" content="MemeGPT - AI Meme Creator. Generate hilarious, custom memes instantly with artificial intelligence. Create viral-worthy content effortlessly. Free download on iOS App Store.">
-    <meta name="keywords" content="MemeGPT, AI meme generator, meme creator, funny memes, AI memes, meme maker app, viral memes, custom memes">
+    <meta name="description" content="MemeGPT - AI Meme Generator. Create viral, personalized memes instantly with advanced AI technology. Generate trending memes and funny content with ease. Free web app.">
+    <meta name="keywords" content="MemeGPT, AI meme generator, meme creator, artificial intelligence memes, viral meme maker, automated meme generation, custom memes, trending memes">
     <meta name="author" content="Washed Up Apps">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -14,15 +17,15 @@
     <meta name="language" content="English">
     
     <!-- Mobile App Meta Tags -->
-    <meta name="apple-itunes-app" content="app-id=6450672985">
-    <meta name="application-name" content="MemeGPT">
+    <meta name="apple-itunes-app" content="app-id=6479205338">
+    <meta name="application-name" content="PuppyTalk">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
     <!-- Enhanced Open Graph Tags -->
-    <meta property="og:title" content="MemeGPT - AI Meme Creator | Generate Viral Memes Instantly">
-    <meta property="og:description" content="Create hilarious, custom memes with MemeGPT's AI-powered meme generator. Transform your ideas into viral-worthy content instantly.">
-    <meta property="og:image" content="https://washedupapps.com/meme.png">
+    <meta property="og:title" content="MemeGPT - AI Meme Generator | Create Viral Memes Instantly">
+    <meta property="og:description" content="Revolutionary AI technology that generates personalized, viral-worthy memes. Transform any prompt into hilarious, shareable content in seconds.">
+    <meta property="og:image" content="https://washedupapps.com/5.png">
     <meta property="og:url" content="https://washedupapps.com/memegpt">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Washed Up Apps">
@@ -32,9 +35,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ariwasch">
     <meta name="twitter:creator" content="@ariwasch">
-    <meta name="twitter:title" content="MemeGPT - AI Meme Creator | Generate Viral Memes">
-    <meta name="twitter:description" content="Create hilarious, custom memes with MemeGPT's AI-powered meme generator. Transform your ideas into viral-worthy content instantly.">
-    <meta name="twitter:image" content="https://washedupapps.com/meme.png">
+    <meta name="twitter:title" content="MemeGPT - AI Meme Generator | Create Viral Memes">
+    <meta name="twitter:description" content="Revolutionary AI technology that generates personalized, viral-worthy memes. Create trending memes instantly with advanced AI.">
+    <meta name="twitter:image" content="https://washedupapps.com/5.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://washedupapps.com/memegpt">
@@ -43,7 +46,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
-    <title>MemeGPT - AI Meme Creator | Generate Viral Memes Instantly</title>
+    <title>MemeGPT - AI Meme Generator | Create Viral Memes Instantly</title>
     
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
@@ -68,35 +71,48 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "WebApplication",
       "name": "MemeGPT",
       "applicationCategory": "EntertainmentApplication",
-      "operatingSystem": "iOS",
-      "description": "AI-powered meme generator that creates custom, hilarious memes instantly. Transform your ideas into viral-worthy content.",
+      "operatingSystem": "Web",
+      "description": "AI-powered meme generator that creates viral, personalized memes instantly from any prompt or idea.",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1000"
       }
     }
     </script>
-    
-    <!-- Organization Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Washed Up Apps",
-      "url": "https://washedupapps.com",
-      "logo": "https://washedupapps.com/wash.png",
-      "sameAs": [
-        "https://twitter.com/ariwasch"
-      ]
-    }
-    </script>
-</head> 
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="wash.png" alt="Washed Up Apps Logo" class="logo">
+            <a href="/" class="site-title">Washed Up Apps</a>
+        </div>
+        <nav class="navigation">
+            <a href="/" class="nav-link">All Apps</a>
+            <a href="https://twitter.com/ariwasch" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <canvas id="starfield"></canvas>
+
+    <section class="app-showcase">
+        <div class="app-item animate">
+            <div class="app-image">
+                <img src="5.png" alt="MemeGPT Interface Screenshot" loading="lazy">
+            </div>
+            <div class="app-details">
+                <h1>MemeGPT</h1>
+                <p class="app-description">Create viral memes instantly with AI. Transform any idea into hilarious, trending memes using advanced artificial intelligence. Perfect for content creators, social media managers, and meme enthusiasts.</p>
+                <button class="app-button" onclick="window.location.href='https://memegpt.ai'">Try It Free</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Washed Up Apps. All rights reserved.
+    </footer>
+</body>
+</html> 
