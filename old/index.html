@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags and Title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download our top-rated iOS apps: RizzGPT - AI dating assistant, RoastGPT - NSFW AI roasting, MemeGPT - AI meme creator, Watevent - local event finder, Rambl - social connection, PuppyTalk - pet translator, and RizzGPT2 - live AI wingman. Free on the App Store.">
-    <meta name="keywords" content="RizzGPT, RoastGPT, MemeGPT, Watevent, Rambl, PuppyTalk, RizzGPT2, AI dating app, AI meme generator, event finder app, pet translator app, social media app, iOS apps, App Store apps, artificial intelligence apps">
+    <meta name="description" content="Discover innovative mobile apps by Washed Up Apps. From RizzGPT's AI dating assistant to MemeGPT's meme creator, RoastGPT's comedy AI, PuppyTalk's pet companion, and Watevent's local event discovery. Join millions of satisfied users.">
+    <meta name="keywords" content="mobile apps, iOS apps, RizzGPT, MemeGPT, RoastGPT, PuppyTalk, Watevent, event discovery, AI apps, meme generator, dating assistant, comedy AI, pet companion">
     <meta name="author" content="Washed Up Apps">
-    <meta property="og:title" content="Download Free AI-Powered iOS Apps | Washed Up Apps">
-    <meta property="og:description" content="Get our collection of innovative AI apps: RizzGPT, RoastGPT, MemeGPT, Watevent, Rambl, PuppyTalk, and RizzGPT2. Transform dating, meme creation, event discovery, and more with our intelligent mobile applications.">
-    <meta property="og:image" content="https://washedupapps.com/wash.png">
+    <meta property="og:title" content="Washed Up Apps - Innovative Mobile Applications">
+    <meta property="og:description" content="Discover innovative mobile apps by Washed Up Apps. From RizzGPT's AI dating assistant to MemeGPT's meme creator, RoastGPT's comedy AI, PuppyTalk's pet companion, and Watevent's local event discovery.">
+    <meta property="og:image" content="wash.png">
     <meta property="og:url" content="https://washedupapps.com">
-    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Download Free AI-Powered iOS Apps | Washed Up Apps">
-    <meta name="twitter:description" content="Get our collection of innovative AI apps: RizzGPT, RoastGPT, MemeGPT, Watevent, Rambl, PuppyTalk, and RizzGPT2. Transform dating, meme creation, event discovery, and more with our intelligent mobile applications.">
-    <meta name="twitter:image" content="https://washedupapps.com/wash.png">
-    <link rel="canonical" href="https://washedupapps.com">
-    <title>Download Free AI-Powered iOS Apps | RizzGPT, RoastGPT, MemeGPT & More</title>
+    <meta name="twitter:title" content="Washed Up Apps - Innovative Mobile Applications">
+    <meta name="twitter:description" content="Discover innovative mobile apps by Washed Up Apps. From RizzGPT's AI dating assistant to MemeGPT's meme creator, RoastGPT's comedy AI, PuppyTalk's pet companion, and Watevent's local event discovery.">
+    <meta name="twitter:image" content="wash.png">
+    <title>Washed Up Apps - Innovative Mobile Applications</title>
     <!-- Favicon -->
     <link rel="icon" href="wash.png" type="image/png">
     <!-- Font Awesome CDN for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
     <style>
         /* Reset and Base Styles */
         *, *::before, *::after {
@@ -32,17 +32,16 @@
         html, body {
             height: 100%;
             scroll-behavior: smooth;
-            /* Removed overflow: hidden; */
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
         }
 
         body {
-            background-color: #05051a; /* Changed to very dark blue */
+            background-color: #05051a; /* Very dark blue */
             color: #E0E0E0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             position: relative;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
             padding-top: 80px; /* Adjusted for fixed header */
         }
 
@@ -116,6 +115,14 @@
             width: 100%;
         }
 
+        /* Menu Icon */
+        .menu-icon {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+        }
+
         /* Canvas Background */
         #starfield {
             position: fixed;
@@ -140,7 +147,7 @@
 
         /* Hero Section */
         .hero-section {
-            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
+            background-color: rgba(5, 5, 26, 0.95);
             color: #FFFFFF;
             padding: 6rem 2rem;
             text-align: left;
@@ -188,9 +195,63 @@
             transform: translateY(-2px);
         }
 
+        /* New Revenue Section Styles */
+        .revenue-section {
+            background-color: rgba(5, 5, 26, 0.95);
+            color: #FFFFFF;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensure full-screen height */
+            scroll-snap-align: start; /* Enable scroll snapping */
+        }
+
+        .revenue-content {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .revenue-content h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .revenue-image {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .revenue-image img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        @media (max-width: 992px) {
+            .revenue-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .revenue-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .revenue-image img {
+                max-width: 100%;
+            }
+
+        }
+
         /* Our Numbers Section */
         .numbers-section {
-            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
+            background-color: rgba(5, 5, 26, 0.0);
             padding: 4rem 2rem;
             text-align: center;
             color: #FFFFFF;
@@ -212,7 +273,7 @@
         }
 
         .number-box {
-            background-color: rgba(30, 30, 30, 0.85);
+            background-color: rgba(30, 30, 30, 0.7);
             border-radius: 12px;
             padding: 2rem;
             flex: 1 1 200px;
@@ -349,14 +410,28 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Stars for Rating */
-        .stars {
-            color: #FFD700; /* Gold color for stars */
+        /* App Stats */
+        .app-stats {
+            display: flex;
+            gap: 2rem;
             margin-bottom: 1.5rem;
         }
 
-        .stars i {
-            margin-right: 0.2rem;
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #3B82F6;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #CCCCCC;
         }
 
         /* App Button */
@@ -379,7 +454,7 @@
 
         /* Testimonials Section */
         .testimonials-section {
-            background: rgba(10, 10, 42, 0.9); /* Adjusted to match new background */
+            background: rgba(5, 5, 26, 0.95);
             padding: 4rem 2rem;
             text-align: center;
             color: #FFFFFF;
@@ -394,11 +469,12 @@
         }
 
         .xyz-blurb {
-            background-color: rgba(10, 10, 42, 0.95); /* Adjusted to match new background */
+            background-color: rgba(5, 5, 26, 0.95);
             padding: 2rem;
             border-radius: 12px;
             margin-bottom: 3rem;
             max-width: 800px;
+            font-size: 1.5rem; /* Added this line to increase font size */
         }
 
         .testimonial-divider {
@@ -470,30 +546,9 @@
             margin-top: 0.5rem;
         }
 
-        /* Company Mission Section */
-        .company-mission {
-            background: rgba(10, 10, 42, 0.85); /* Adjusted to match new background */
-            padding: 4rem 2rem;
-            text-align: center;
-            color: #FFFFFF;
-        }
-
-        .company-mission h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .company-mission p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #B3B3B3;
-        }
-
         /* Contact Section */
         .contact-section {
-            background: rgba(10, 10, 42, 0.8); /* Adjusted to match new background */
+            background: rgba(5, 5, 26, 0.95);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -571,10 +626,6 @@
                 align-items: center;
             }
 
-            .app-item.image-left, .app-item.image-right {
-                flex-direction: column;
-            }
-
             .app-image {
                 max-width: 80%;
                 margin: 1rem 0;
@@ -614,6 +665,9 @@
             .hero-button {
                 align-self: center;       /* Centers the button */
             }
+            .app-item.image-left, .app-item.image-right {
+                flex-direction: column;
+            }
 
             /* Testimonials Adjustments */
             .testimonial {
@@ -639,6 +693,30 @@
             /* Testimonials Blurb Adjustment */
             .testimonials-blurb {
                 font-size: 1rem;
+            }
+
+            /* Mobile Navigation Menu */
+            .navigation {
+                display: none; /* Hide the navigation menu by default */
+                position: absolute;
+                top: 80px; /* Adjust according to header height */
+                left: 0;
+                width: 100%;
+                background: rgba(5, 5, 26, 0.95);
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+                z-index: 9;
+            }
+            .navigation.active {
+                display: flex; /* Show the navigation menu when active */
+            }
+            .menu-icon {
+                display: block; /* Show the menu icon on small screens */
+            }
+            .site-header {
+                justify-content: space-between; /* Adjust header alignment */
             }
         }
 
@@ -751,6 +829,28 @@
                 font-size: 0.9rem;
             }
         }
+        /* Styling for Explore All Apps button */
+        .explore-all-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .explore-all-button {
+            background-color: #3B82F6;
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .explore-all-button:hover {
+            background-color: #2563EB;
+            transform: translateY(-2px);
+        }
 
         /* Section Break Styling */
         .section-break {
@@ -775,17 +875,65 @@
             <img src="wash.png" alt="Washed Up Apps Logo" class="logo">
             <span class="site-title">Washed Up Apps</span>
         </div>
-        <nav class="navigation">
-            <a href="https://twitter.com/ariwasch" class="nav-link">Contact</a>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="navigation" id="nav-menu">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#apps" class="nav-link">Apps</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <!-- Canvas for Moving Starry Background -->
     <canvas id="starfield"></canvas>
 
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <h1>See <span class="highlight">473%</span> Increase in Your Income with Washed Up Apps</h1>
+        <p class="hero-blurb">You're sitting on untapped potential. We build digital products that turn your reach into a viable subscription business and scale your earnings exponentially.</p>
+        <button class="hero-button" onclick="window.location.href='#contact'">Get Started</button>
+    </section>
+
+    <!-- New Revenue Stream Section -->
+    <section class="revenue-section">
+        <div class="revenue-content">
+            <h2>Unlock a New Revenue Stream</h2>
+        </div>
+        <div class="revenue-image">
+            <img src="revenuecatchat.png" alt="Revenue Stream Image" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Break Before Numbers Section -->
+    <div class="section-break"></div>
+
+    <!-- Our Numbers Section -->
+    <section class="numbers-section">
+        <h2>Our Numbers Speak for Themselves</h2>
+        <div class="numbers-container">
+            <div class="number-box">
+                <div class="number">160K+</div>
+                <div class="label">Downloads</div>
+            </div>
+            <div class="number-box">
+                <div class="number">16</div>
+                <div class="label">Apps Launched</div>
+            </div>
+            <div class="number-box">
+                <div class="number">4M+</div>
+                <div class="label">App Impressions</div>
+            </div>
+        </div>
+    </section>
+
     <!-- App Portfolio Section -->
     <section class="app-portfolio" id="apps">
-        <h2>Try our apps for free!</h2>
+        <br>
+        <h2>Some Apps We Worked On</h2>
 
         <!-- RizzGPT App Item -->
         <div class="app-item animate image-right" id="app2" data-delay="0.2s">
@@ -793,142 +941,168 @@
                 <img src="3.png" alt="RizzGPT Screenshot" loading="lazy">
             </div>
             <div class="app-details">
-                <h2 class="app-title">RizzGPT - AI Dating Assistant</h2>
-                <p class="app-description">Your intelligent dating wingman powered by AI. Get personalized message suggestions, conversation starters, and dating advice to improve your dating game. Perfect for dating apps like Tinder, Bumble, and Hinge.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                <h2 class="app-title">RizzGPT</h2>
+                <p class="app-description">Your AI-powered dating wingman to craft the perfect messages.</p>
+                <div class="app-stats">
+                    <div class="stat">
+                        <span class="stat-number">70K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Impressions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.1/5</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
                 </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/rizzgpt-ai-dating-wingman/id6444730312?platform=iphone'">Download Now</button>
-            </div>
-        </div>
-
-        <!-- RoastGPT App Item -->
-        <div class="app-item animate image-right" id="app8" data-delay="1.6s">
-            <div class="app-image">
-                <img src="roast.png" alt="RoastGPT Screenshot" loading="lazy">
-            </div>
-            <div class="app-details">
-                <h2 class="app-title">RoastGPT</h2>
-                <p class="app-description">NSFW AI roast genius to deliver witty and sharp comebacks.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/roastgpt-nsfw-ai-roast-genius/id6502788758?platform=iphone'">Download Now</button>
+                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/rizzgpt-ai-dating-wingman/id6444730312?platform=iphone'">More Info</button>
             </div>
         </div>
 
         <!-- MemeGPT App Item -->
-        <div class="app-item animate image-right" id="app3" data-delay="0.4s">
+        <div class="app-item animate image-right" id="app2" data-delay="0.2s">
             <div class="app-image">
                 <img src="5.png" alt="MemeGPT Screenshot" loading="lazy">
             </div>
             <div class="app-details">
                 <h2 class="app-title">MemeGPT</h2>
                 <p class="app-description">Create hilarious memes effortlessly with AI-driven tools.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="app-stats">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">400K+</span>
+                        <span class="stat-label">Impressions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
                 </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/memegpt-ai-meme-generator/id6476749813?platform=iphone'">Download Now</button>
+                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/memegpt-ai-meme-generator/id6476749813'">More Info</button>
             </div>
         </div>
 
         <!-- Watevent App Item -->
-        <div class="app-item animate image-right" id="app4" data-delay="0.8s">
+        <div class="app-item animate image-right" id="app4" data-delay="0.4s">
             <div class="app-image">
                 <img src="4.png" alt="Watevent Screenshot" loading="lazy">
             </div>
             <div class="app-details">
                 <h2 class="app-title">Watevent</h2>
                 <p class="app-description">Discover and join local fun events tailored to your interests.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="app-stats">
+                    <div class="stat">
+                        <span class="stat-number">5K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Impressions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
                 </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/watevent-local-fun-events/id6475428219?platform=iphone'">Download Now</button>
+                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/watevent-local-fun-events/id6475428219?platform=iphone'">More Info</button>
             </div>
         </div>
-
-        <!-- Rambl App Item -->
-        <div class="app-item animate image-right" id="app5" data-delay="1.0s">
-            <div class="app-image">
-                <img src="rambl.png" alt="Rambl Screenshot" loading="lazy">
-            </div>
-            <div class="app-details">
-                <h2 class="app-title">Rambl</h2>
-                <p class="app-description">Talk to the world and connect with people who share your interests.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star-half-alt"></i>
-                </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/rambl-talk-to-the-world/id1568942515?platform=iphone'">Download Now</button>
-            </div>
+        <div class="explore-all-container">
+            <button class="explore-all-button" onclick="window.location.href='https://washedupapps.com/apps'">See More</button>
         </div>
-
-        <!-- PuppyTalk App Item -->
-        <div class="app-item animate image-right" id="app6" data-delay="1.2s">
-            <div class="app-image">
-                <img src="puppy.png" alt="PuppyTalk Screenshot" loading="lazy">
-            </div>
-            <div class="app-details">
-                <h2 class="app-title">PuppyTalk</h2>
-                <p class="app-description">Dog pet translator powered by AI to understand and communicate with your pets.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/puppytalk-dog-pet-translator/id6479205338?platform=iphone'">Download Now</button>
-            </div>
-        </div>
-
-        <!-- RizzGPT2 App Item -->
-        <div class="app-item animate image-right" id="app7" data-delay="1.4s">
-            <div class="app-image">
-                <img src="rizz2.png" alt="RizzGPT2 Screenshot" loading="lazy">
-            </div>
-            <div class="app-details">
-                <h2 class="app-title">RizzGPT2</h2>
-                <p class="app-description">Live AI Rizz wingman to help you navigate social interactions in real-time.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <button class="app-button" onclick="window.location.href='https://apps.apple.com/us/app/rizzgpt2-live-ai-rizz-wingman/id6476828503?platform=iphone'">Download Now</button>
-            </div>
-        </div>
+    
+        <br>
+        <br>
 
         <!-- Add more app-item divs as needed -->
     </section>
 
-    <!-- Footer Section -->
+    <!-- Break Before Testimonials Section -->
+    <div class="section-break"></div>
+
+    <!-- Testimonials Section with Integrated XYZ Blurb -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="xyz-blurb">
+            <p>At Washed Up Apps, we specialize in crafting innovative apps that transform your ideas into engaging digital experiences, delivering exceptional results for our clients.</p>
+        </div>
+        <div class="testimonial-divider"></div>
+
+        <div class="testimonial-container">
+            <!-- First Testimonial -->
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="face.jpg" alt="Aadit Sheth profile picture" class="profile-pic">
+                </div>
+                <div>
+                    <blockquote>
+                        "Partnering with Washed Up Apps made all the difference. I'm not technical at all, but they helped me go from idea to launch effortlessly. My income tripled, and the audience loved the product."
+                    </blockquote>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <cite>
+                        Aadit Sheth (@aaditsh)<br>
+                        <span class="influencer-info">Twitter Influencer (296k followers)</span>
+                    </cite>
+                </div>
+            </div>
+            <!-- Second Testimonial -->
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="3e8.jpeg" alt="Jane Doe profile picture" class="profile-pic">
+                </div>
+                <div>
+                    <blockquote>
+                        "Working with Washed Up Apps was a game-changer. Their expertise in AI and app development helped me create a product that my audience couldn't get enough of. My revenue soared beyond expectations."
+                    </blockquote>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <cite>
+                        @3.0e8<br>
+                        <span class="influencer-info">TikTok Content Creator (195k followers)</span>
+                    </cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Connect with Us</h2>
+        <div class="social-links">
+            <a href="https://x.com/ariwasch" target="_blank" aria-label="Ari's Twitter Profile">
+                <i class="fab fa-twitter"></i> Ari
+            </a>
+            <a href="https://x.com/amaan_shabeer" target="_blank" aria-label="Amaan's Twitter Profile">
+                <i class="fab fa-twitter"></i> Amaan
+            </a>
+            <a href="https://x.com/diabyismael" target="_blank" aria-label="Ismael's Twitter Profile">
+                <i class="fab fa-twitter"></i> Ismael
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         &copy; 2024 Washed Up Apps. All rights reserved.
     </footer>
 
-    <!-- JavaScript for Scroll-triggered Animations and Starfield -->
+    <!-- JavaScript for Scroll-triggered Animations, Hamburger Menu, and Starfield with Shooting Stars -->
     <script>
         // Starfield and Shooting Stars Animation
         const canvas = document.getElementById('starfield');
@@ -981,44 +1155,60 @@
 
             reset() {
                 this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height * 0.5; // Start from the top half
-                this.length = Math.random() * 80 + 10;
-                this.speed = Math.random() * 10 + 6;
-                this.angle = Math.random() * Math.PI / 3 + Math.PI / 6; // Between 30 and 60 degrees
+                this.y = 0; // Start from top
+                this.length = Math.random() * 100 + 50; // Length between 50 to 150
+                this.speed = Math.random() * 10 + 10; // Speed between 10 to 20
                 this.opacity = 1;
-                this.trail = [];
+                this.angle = Math.PI / 4; // 45 degrees
+                this.velocityX = Math.cos(this.angle) * this.speed;
+                this.velocityY = Math.sin(this.angle) * this.speed;
+                this.isActive = true;
+                // Random delay before next shooting star
+                this.delay = Math.random() * 5000; // 0 to 5 seconds
+                this.timer = 0;
             }
 
-            update() {
-                const vx = Math.cos(this.angle) * this.speed;
-                const vy = Math.sin(this.angle) * this.speed;
-                this.x += vx;
-                this.y += vy;
-                this.trail.push({x: this.x, y: this.y});
-                if (this.trail.length > 10) {
-                    this.trail.shift();
+            update(deltaTime) {
+                if (!this.isActive) {
+                    this.timer += deltaTime;
+                    if (this.timer >= this.delay) {
+                        this.reset();
+                    }
+                    return;
                 }
 
+                this.x += this.velocityX;
+                this.y += this.velocityY;
+
                 // Fade out
-                this.opacity -= 0.02;
-                if (this.opacity <= 0 || this.x > canvas.width || this.y > canvas.height) {
-                    this.reset();
+                this.opacity -= 0.01;
+                if (this.opacity <= 0) {
+                    this.isActive = false;
+                }
+
+                // Remove if out of bounds
+                if (this.x > canvas.width + this.length || this.y > canvas.height + this.length) {
+                    this.isActive = false;
                 }
             }
 
             draw(ctx) {
+                if (!this.isActive) return;
+
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
-                ctx.lineTo(this.x - Math.cos(this.angle) * this.length, this.y - Math.sin(this.angle) * this.length);
+                ctx.lineTo(this.x - this.velocityX * this.length / this.speed, this.y - this.velocityY * this.length / this.speed);
                 ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
                 ctx.lineWidth = 2;
                 ctx.stroke();
             }
         }
 
-        // Initialize stars
+        // Initialize stars and shooting stars
         const stars = [];
-        const numStars = 400;
+        const shootingStars = [];
+        const numStars = 100;
+        const numShootingStars = 3; // Number of shooting stars to manage
 
         for (let i = 0; i < numStars; i++) {
             const x = Math.random() * canvas.width;
@@ -1029,30 +1219,24 @@
             stars.push(new Star(x, y, radius, speed, opacity));
         }
 
-        // Initialize shooting stars
-        const shootingStars = [];
-        const shootingStarInterval = 200000000; // Increased time between shooting stars to 200,000 ms (200 seconds)
-
-        function createShootingStar() {
+        for (let i = 0; i < numShootingStars; i++) {
             shootingStars.push(new ShootingStar());
-            // Schedule next shooting star
-            setTimeout(createShootingStar, shootingStarInterval + Math.random() * 3000);
         }
 
-        // Start shooting stars
-        createShootingStar();
+        let lastTime = performance.now();
 
         // Animation loop
-        function animate() {
+        function animate(time) {
+            const deltaTime = time - lastTime;
+            lastTime = time;
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // Draw stars
             for (let star of stars) {
                 star.update();
                 star.draw(ctx);
             }
-            // Draw shooting stars
             for (let shootingStar of shootingStars) {
-                shootingStar.update();
+                shootingStar.update(deltaTime);
                 shootingStar.draw(ctx);
             }
             requestAnimationFrame(animate);
@@ -1084,35 +1268,15 @@
             appItems.forEach(item => {
                 observer.observe(item);
             });
-        });
-    </script>
 
-    <!-- Add structured data for better SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Washed Up Apps",
-      "url": "https://washedupapps.com",
-      "logo": "https://washedupapps.com/wash.png",
-      "sameAs": [
-        "https://twitter.com/ariwasch"
-      ],
-      "offers": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "RizzGPT",
-          "operatingSystem": "iOS",
-          "applicationCategory": "LifestyleApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
-        },
-        // Add similar structured data for each app
-      ]
-    }
+            // Hamburger Menu Toggle
+            const menuIcon = document.getElementById('menu-icon');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuIcon.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
